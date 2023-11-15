@@ -8,7 +8,7 @@ const response = require('./response')
 //route utama get 
 app.get('/', (req, res) => {
     db.query((error, result) => {
-       response(200, result, " http://localhost:3000/headset ,/handphone, /laptop", res)
+       response(200, result, " /headset ,/handphone, /laptop", res)
     })
 })
 
@@ -34,5 +34,5 @@ app.get('/handphone', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port http://localhost:${port}`)
+  console.log(`Example app listening on port ${port}`)
 })
